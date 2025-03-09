@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: product-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/emart
+      database: E-Mart
+      authentication-database: admin
+
+  server:
+    port: 8081
+
+logging:
+  level:
+    # Enable logging for MongoDB queries
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.springframework.data.mongodb.core.query: DEBUG
+
+    # Enable logging for raw MongoDB driver commands (optional, for deeper logs)
+    org.mongodb.driver: DEBUG
